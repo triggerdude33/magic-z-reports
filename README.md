@@ -1,5 +1,11 @@
 # magic-z-reports
-Tool for accounting of z-reports created by iZettle cashregister.
+Tool for accounting of z-reports created by iZettle cashregister. The script works by automatically categorizing the products in a z-report by their label and summing each of the categories. These sums are then used to work out the accounting figures for each category.
+
+The workflow is as follows:
+1. Run the script on one ore more z-reports
+2. Copy and paste the results into the accounting software
+3. ???
+4. PROFIT
 
 ### Prerequisites
 You have to have the command `pdftotext` from the package `poppler-utils` installed to be able to run the script.
