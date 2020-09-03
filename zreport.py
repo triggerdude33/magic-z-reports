@@ -135,8 +135,8 @@ def main():
         print('{0:8.2f} kr - {1}'.format(sold_Sprit, "Försäljning sprit"))
         print('{0:8.2f} kr - {1}'.format(sold_Mat, "Försäljning mat"))
         print("\nInköp och Lager (Inköp på debet & Lager på kredit)")
-        print('{0:8.2f} kr - {1}'.format(sold_Ol*0.85, "Inköp öl & Öllager"))
-        print('{0:8.2f} kr - {1}'.format(sold_Cider*0.85, "Inköp cider & Ciderlager"))
+        print('{0:8.2f} kr - {1}'.format(sold_Ol*0.71, "Inköp öl & Öllager"))
+        print('{0:8.2f} kr - {1}'.format(sold_Cider*0.76, "Inköp cider & Ciderlager"))
         print('{0:8.2f} kr - {1}'.format(sold_Sprit*0.43, "Inköp sprit & Spritlager"))
         print('{0:8.2f} kr - {1}'.format(sold_Vin*0.85, "Inköp vin & Vinlager"))
     else:
