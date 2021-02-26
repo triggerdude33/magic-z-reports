@@ -73,12 +73,11 @@ def main():
                 return
     
     # Debug-print
-    print(inp)
+    #print(inp)
 
     lines = inp.split('\n')
     card, cash = getPayments(lines)
     discounts = getDiscounts(lines)
-    print(discounts)
     categorys = getProductSales(lines)
 
     # Debug-prints
