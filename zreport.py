@@ -48,6 +48,7 @@ list_Alkfritt = [
 "Alkfritt",
 "Läsk",
 "Pop Art",
+"Drycker",
 ]
 
 # Lista över produkter/kategorier som ska räknas som mat
@@ -72,11 +73,12 @@ def main():
                 return
     
     # Debug-print
-    #print(inp)
+    print(inp)
 
     lines = inp.split('\n')
     card, cash = getPayments(lines)
     discounts = getDiscounts(lines)
+    print(discounts)
     categorys = getProductSales(lines)
 
     # Debug-prints
@@ -174,8 +176,8 @@ def getProductSales(lines):
 
 def getPayments(lines):
     """This function takes a list of lines and returns a tuple with the total card and cash payments."""
-    card_paymentsregex = re.compile("\s*Card\s*\(\d+\)\s*([\d\s]+,\d\d)\s*")
-    cash_paymentsregex = re.compile("\s*Cash\s*\(\d+\)\s*([\d\s]+,\d\d)\s*")
+    card_paymentsregex = re.compile("\s*Kort\s*\(\d+\)\s*([\d\s]+,\d\d)\s*")
+    cash_paymentsregex = re.compile("\s*Kontant\s*\(\d+\)\s*([\d\s]+,\d\d)\s*")
     cash = 0
     card = 0
     for l in lines:
@@ -189,7 +191,7 @@ def getPayments(lines):
 
 def getDiscounts(lines):
     """This function takes a list of lines and returns the total sum of discounts"""
-    dateregex = re.compile("\s*Discount\s+(-?\d+\.\d\d)\s+-?\d+\.\d\d\s+-?\d+\.\d\d\s*")
+    dateregex = re.compile("\s*Rabatt\s+\d+\s+(-?\d+\,\d\d)\s+[\d,]+\d\d\s+-?\d+\,\d\d")
     for l in lines:
         match = dateregex.match(l)
         if match:
@@ -206,7 +208,7 @@ def getDate(lines):
 
 def getNettoTotal(lines):
     """This function takes a list of lines and returns the net sum of sales"""
-    nettoregex = re.compile("\s*Net amount\s+([\d\s]+,\d\d)\s+[\d,]+\d\d\s+[\d\s]+,\d\d\s*")
+    nettoregex = re.compile("\s*Totalt Netto\s+([\d\s]+,\d\d)\s+[\d,]+\d\d\s+[\d\s]+,\d\d\s*")
     total = 0
     for l in lines:
         match = nettoregex.match(l)
