@@ -20,6 +20,7 @@ list_Cider = [
 "Sommersby Secco",
 "Vikbo Cider Rabarber",
 "Xide Kiwi Cucumber",
+"Bulmers Zesty Blood orange",
 ]
 
 # Lista över produkter/kategorier som ska räknas som sprit
@@ -49,11 +50,13 @@ list_Alkfritt = [
 "Läsk",
 "Pop Art",
 "Drycker",
+"Alkfri drink",
 ]
 
 # Lista över produkter/kategorier som ska räknas som mat
 list_Mat = [
 "Mat",
+"Billys Pan Pizza",
 ]
 
 def main():
@@ -101,7 +104,7 @@ def main():
 
         unhandledProducts = False
         for k,v in categorys.items():
-            if k not in list_Ol and k not in list_Cider and k != "Sprit" and k!= "Mat" and k not in list_Vin and k not in list_Alkfritt:
+            if k not in list_Ol and k not in list_Cider and k != "Sprit" and k not in list_Mat and k not in list_Vin and k not in list_Alkfritt:
                 print('{0:8.2f} kr - {1}'.format(v, k))
                 unhandledProducts = True
         if unhandledProducts:
