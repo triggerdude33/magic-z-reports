@@ -7,6 +7,8 @@ The workflow is as follows:
 3. ???
 4. PROFIT
 
+### NOTE: As of somewhere in April 2020 the layout in the reports changed. Script has been updated to work with new reports, although the versions are not cross compatible. If dealing with reports from before April please use old_zreport.py as this is the version compatible with the old reports.
+
 ### Prerequisites
 You have to have the command `pdftotext` from the package `poppler-utils` installed to be able to run the script.
 The script is tested on version `0.62.0`.
