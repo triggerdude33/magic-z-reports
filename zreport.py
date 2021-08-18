@@ -6,6 +6,7 @@ import sys, re, locale
 list_Ol = [
 "Öl",
 "pÖl",
+"St. Andrews"
 ]
 
 # Lista över produkter/kategorier som ska räknas som cider
