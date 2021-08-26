@@ -58,6 +58,8 @@ list_Alkfritt = [
 list_Mat = [
 "Mat",
 "Billys Pan Pizza",
+"Godis",
+"Ätbart"
 ]
 
 def main():
