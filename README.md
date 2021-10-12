@@ -38,6 +38,7 @@ The script is used with one command.
 ```
 python3 zreport.py "file1.pdf" ["file2.pdf" ...]
 ```
+Note that it has to be run using python3 command, python will not work.
 You may specify more than one file if they are from the same date (event).
 The file paths may be either the full or the relative filepath.
 
