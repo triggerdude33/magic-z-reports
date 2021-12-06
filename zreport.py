@@ -76,7 +76,7 @@ def main():
                 return
     
     # Debug-print
-    #print(inp)
+    print(inp)
 
     lines = inp.split('\n')
     card, cash = getPayments(lines)
@@ -84,10 +84,10 @@ def main():
     categorys = getProductSales(lines)
 
     # Debug-prints
-    #print(card)
-    #print(cash)
-    #print(discounts)
-    #print(categorys)
+    print(card)
+    print(cash)
+    print(discounts)
+    print(categorys)
 
     if sum(categorys.values())+ discounts == (card+cash):
         print("\n-------------------------------------------")
@@ -156,7 +156,9 @@ def getProductSales(lines):
     # Group 1 matches everything up until a ',' or 3 consecutive spaces.
     # \d+\s+ before group 2 filters out the number of items sold.
     # \s+[\d,]+\d\d\s+ before group 3 filters out the VAT.
-    productregex = re.compile("\s*([A-ö+\s\d]*),?.+?\s{3}\d+\s+([\d\s]+,\d\d)\s+[\d,]+\d\d\s+([\d\s]+,\d\d)")
+
+    
+    productregex = re.compile("\s*([A-ö+\s\d]*),?.+?\s{3}\d+\s\s+([\d\s]+,\d\d)\s+[\d,]+\d\d\s+([\d\s]+,\d\d)")
     categorys = {}
 
     sumSold  = 0
