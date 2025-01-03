@@ -5,22 +5,11 @@ import sys, re, locale
 # Lista över produkter/kategorier som ska räknas som öl
 list_Ol = [
 "Öl",
-"pÖl",
 ]
 
 # Lista över produkter/kategorier som ska räknas som cider
 list_Cider = [
-"PCider 2019",
 "Cider",
-"Cidraie original",
-"pCider",
-"Vikbo Cider Rabarber",
-"Crush",
-"Somersby Pear",
-"Sommersby Secco",
-"Vikbo Cider Rabarber",
-"Xide Kiwi Cucumber",
-"Bulmers Zesty Blood orange",
 ]
 
 # Lista över produkter/kategorier som ska räknas som sprit
@@ -31,32 +20,18 @@ list_Sprit = [
 # Lista över produkter/kategorier som ska räknas som vin
 list_Vin = [
 "Vin",
-"Bubbel",
-"Aniara",
-"Freixenet Cava (glas)",
-"Freixenet Cava (hel flaska)",
-"Jacob’s Creek Chardonnay",
-"Prosecco FLASKA",
-"Les Oliviers Rosé (ett glas)",
-"Les Oliviers Rosé (hel flaska)",
-"Sun Gate Chardonnay (glas)",
-"Sun Gate Chardonnay (hel flaska)",
-"Jacob’s Creek Chardonnay Bubbel",
 ]
 
 # Lista över produkter/kategorier som ska räknas som alkoholfritt
 list_Alkfritt = [
 "Alkfritt",
 "Läsk",
-"Pop Art",
-"Drycker",
-"Alkfri drink",
 ]
 
 # Lista över produkter/kategorier som ska räknas som mat
 list_Mat = [
 "Mat",
-"Billys Pan Pizza",
+"Billys",
 ]
 
 def main():
