@@ -5,22 +5,11 @@ import sys, re, locale
 # Lista över produkter/kategorier som ska räknas som öl
 list_Ol = [
 "Öl",
-"pÖl",
 ]
 
 # Lista över produkter/kategorier som ska räknas som cider
 list_Cider = [
-"PCider 2019",
 "Cider",
-"Cidraie original",
-"pCider",
-"Vikbo Cider Rabarber",
-"Crush",
-"Somersby Pear",
-"Sommersby Secco",
-"Vikbo Cider Rabarber",
-"Xide Kiwi Cucumber",
-"Bulmers Zesty Blood orange",
 ]
 
 # Lista över produkter/kategorier som ska räknas som sprit
@@ -31,32 +20,18 @@ list_Sprit = [
 # Lista över produkter/kategorier som ska räknas som vin
 list_Vin = [
 "Vin",
-"Bubbel",
-"Aniara",
-"Freixenet Cava (glas)",
-"Freixenet Cava (hel flaska)",
-"Jacob’s Creek Chardonnay",
-"Prosecco FLASKA",
-"Les Oliviers Rosé (ett glas)",
-"Les Oliviers Rosé (hel flaska)",
-"Sun Gate Chardonnay (glas)",
-"Sun Gate Chardonnay (hel flaska)",
-"Jacob’s Creek Chardonnay Bubbel",
 ]
 
 # Lista över produkter/kategorier som ska räknas som alkoholfritt
 list_Alkfritt = [
 "Alkfritt",
 "Läsk",
-"Pop Art",
-"Drycker",
-"Alkfri drink",
 ]
 
 # Lista över produkter/kategorier som ska räknas som mat
 list_Mat = [
 "Mat",
-"Billys Pan Pizza",
+"Billys",
 ]
 
 def main():
@@ -139,10 +114,10 @@ def main():
         print('{0:8.2f} kr - {1}'.format(sold_Sprit, "Försäljning sprit"))
         print('{0:8.2f} kr - {1}'.format(sold_Mat, "Försäljning mat"))
         print("\nInköp och Lager (Inköp på debet & Lager på kredit)")
-        print('{0:8.2f} kr - {1}'.format(sold_Ol*0.71, "Inköp öl & Öllager"))
-        print('{0:8.2f} kr - {1}'.format(sold_Cider*0.76, "Inköp cider & Ciderlager"))
-        print('{0:8.2f} kr - {1}'.format(sold_Sprit*0.43, "Inköp sprit & Spritlager"))
-        print('{0:8.2f} kr - {1}'.format(sold_Vin*0.85, "Inköp vin & Vinlager"))
+        print('{0:8.2f} kr - {1}'.format(sold_Ol*0.8, "Inköp öl & Öllager"))
+        print('{0:8.2f} kr - {1}'.format(sold_Cider*0.8, "Inköp cider & Ciderlager"))
+        print('{0:8.2f} kr - {1}'.format(sold_Sprit*0.6, "Inköp sprit & Spritlager"))
+        print('{0:8.2f} kr - {1}'.format(sold_Vin*0.8, "Inköp vin & Vinlager"))
     else:
         print("PARSING ERROR: There seems to be some problem with the parsing of the file")
 
